@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap");
+:root {
+  --textColor: #ffffffc7;
+  --borderColor: #ffffffa2;
+  --btnBorderColor: #970083b2;
+  --btnBgColor: #ec009180;
+  --btnBgColor2: #ffffff86;
+  --rightSecColor: #5690b8;
+}
+* {
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Kufi Arabic", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--btnBorderColor);
+}
+::selection {
+  color: var(--btnBgColor);
+  background: var(--textColor);
+}
+html {
+  font-size: 15px;
+}
+body {
+  background: linear-gradient(75deg, #c02e5cbb, #4c94bd);
+}
+.hidden {
+  display: none;
+}
+nav {
+  height: 75px;
+  width: 100%;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.1px);
+  -webkit-backdrop-filter: blur(6.1px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+nav ul {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+nav ul li {
+  width: 20%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+nav ul li a {
+  font-size: 1.45rem;
+  padding: 10px 25px;
+  border-radius: 25px;
+  transition: 0.3s;
+  color: var(--textColor);
+}
+.active,
+nav ul li a:hover {
+  background-color: white;
+  color: var(--btnBgColor);
+}
+section {
+  min-height: 100vh;
+  flex-direction: row;
+  gap: 50px;
+  margin: 50px;
+  justify-content: space-around;
+  display: flex;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
+}
+.card {
+  min-height: 50%;
+  width: 35%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  border: 1px solid var(--borderColor);
+  padding: 35px;
+  border-radius: 25px;
+  border: 2px solid var(--borderColor);
+  box-shadow: 0 0 15px var(--borderColor);
+  position: relative;
+  transition: 0.3s;
+}
+.card:hover {
+  scale: 1.05;
+  box-shadow: 0 0 25px var(--btnBgColor);
+  border: 2px solid var(--btnBgColor);
+}
+.card .head-text {
+  font-size: 2rem;
+  font-weight: 600;
+  color: white;
+}
+.card .content-text {
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #ffffffc7;
+}
+.card button {
+  position: absolute;
+  left: 25px;
+  bottom: 25px;
+  height: 35px;
+  width: 100px;
+  border-radius: 18px;
+  border: 2px solid var(--btnBorderColor);
+  box-shadow: 0 0 15px var(--btnBorderColor);
+  cursor: pointer;
+  transition: 0.3s;
+  color: var(--textColor);
+  background-color: var(--btnBgColor);
+}
+.card button:hover {
+  scale: 1.1;
+  background-color: var(--textColor);
+  color: var(--btnBgColor);
+  box-shadow: 0 0 35px var(--btnBgColor);
+}
+section.assignments,
+section.summaries,
+section.explains,
+section.books {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 45px;
+}
+section h1 {
+  font-size: 2rem;
+  color: var(--borderColor);
+}
+.secBtn {
+  width: 65%;
+  height: 75px;
+  border-radius: 50px;
+  background: var(--btnBgColor2);
+  color: var(--btnBorderColor);
+  border: 2px solid var(--borderColor);
+  box-shadow: 0 0 15px var(--borderColor);
+  cursor: pointer;
+  font-size: 1.4rem;
+  font-weight: 700;
+  transition: 0.3s;
+}
+.secBtn:hover {
+  box-shadow: 0 0 25px var(--btnBorderColor);
+  background-color: var(--btnBgColor);
+  color: var(--textColor);
+  border: 2px solid var(--btnBorderColor);
+  scale: 1.1;
+}
+.displayDiv h3,
+.displayDiv div {
+  text-align: center;
+}
+.displayDiv h3 {
+  font-size: 1.75rem;
+  color: var(--textColor);
+}
+.displayDiv div {
+  font-size: 1.35rem;
+  color: var(--btnBgColor2);
+}
+.downloadBtn {
+  margin-top: 25px;
+  width: 100%;
+  height: 75px;
+  border-radius: 35px;
+  cursor: pointer;
+  background-color: var(--btnBgColor);
+  color: var(--textColor);
+  border: 2px solid var(--btnBorderColor);
+  box-shadow: 0 0 15px var(--btnBgColor);
+  font-size: 2rem;
+  transition: 0.3s;
+}
+.downloadBtn:hover {
+  background-color: var(--textColor);
+  color: var(--btnBgColor);
+  box-shadow: 0 0 35px var(--btnBgColor);
+  border: var(--btnBgColor);
+  scale: 1.05;
+}
+.required {
+  width: 50%;
+}
+.required span {
+  color: red;
+  font-size: 1.15rem;
+}
+.required span::selection {
+  color: red;
+  background: black;
+}
+.required div {
+  width: 100%;
+}
+.required div img {
+  width: 100%;
+}
+.required button {
+  width: 100%;
+  scale: 0.7;
+}
+.required button:hover {
+  scale: 0.8;
+}
+footer {
+  border-top: 1px solid var(--borderColor);
+  min-height: 40vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+footer a {
+  color: var(--borderColor);
+  font-size: 1.35rem;
+  font-weight: 600;
+  transition: 0.2s;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+footer .content {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+footer .content .about,
+footer .content .sections {
+  display: flex;
+  flex-direction: column;
+}
+footer .follow-us {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  height: 50px;
+}
+footer .follow-us a {
+  font-size: 3rem;
+  color: rgb(255, 255, 255);
+  transition: 0.3s;
+}
+footer .follow-us a:hover {
+  color: rgb(0, 140, 255);
+  scale: 1.3;
+}
+
+@media (max-width: 900px) {
+  .card {
+    flex-basis: 100%;
+  }
+  html {
+    font-size: 10px;
+  }
+  nav ul li a {
+    padding: 6px 9px;
+  }
+}
